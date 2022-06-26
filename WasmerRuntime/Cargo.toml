@@ -1,0 +1,12 @@
+[package]
+name = "WasmerRuntime"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+wasmer = "2.2.1"
+wasmer-compiler-cranelift = "2.2.1"
+wasmer-engine-universal = "2.2.1"
+byteorder = "1.4.3"

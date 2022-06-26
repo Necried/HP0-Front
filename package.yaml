@@ -1,0 +1,63 @@
+name:                HP0
+version:             0.1.0.0
+github:              "Necried/HP0"
+license:             BSD3
+author:              "Lucas Dutton"
+maintainer:          "ldutton888@gmail.com"
+copyright:           "2020 Lucas Dutton"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/Necried/HP0#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- megaparsec
+- text
+- bytestring
+- parser-combinators
+- parsers
+- containers
+- prettyprinter
+- pretty-simple
+- process
+- mtl
+- haskeline
+- split
+- witch
+- microlens-platform
+- hashable
+
+library:
+  source-dirs: src
+
+executables:
+  HP0-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - HP0
+
+tests:
+  HP0-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - HP0

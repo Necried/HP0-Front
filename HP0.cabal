@@ -1,0 +1,114 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           HP0
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/Necried/HP0#readme>
+homepage:       https://github.com/Necried/HP0#readme
+bug-reports:    https://github.com/Necried/HP0/issues
+author:         Lucas Dutton
+maintainer:     ldutton888@gmail.com
+copyright:      2020 Lucas Dutton
+license:        BSD3
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/Necried/HP0
+
+library
+  exposed-modules:
+      CGWat
+      CGWatv2
+      DebugUtils
+      Lexer
+      Lib
+      Parser
+      PrettyPrint
+      Semant
+      Syntax
+      TestIndent
+      Utils
+  other-modules:
+      Paths_HP0
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , containers
+    , hashable
+    , haskeline
+    , megaparsec
+    , microlens-platform
+    , mtl
+    , parser-combinators
+    , parsers
+    , pretty-simple
+    , prettyprinter
+    , process
+    , split
+    , text
+    , witch
+  default-language: Haskell2010
+
+executable HP0-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_HP0
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HP0
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , hashable
+    , haskeline
+    , megaparsec
+    , microlens-platform
+    , mtl
+    , parser-combinators
+    , parsers
+    , pretty-simple
+    , prettyprinter
+    , process
+    , split
+    , text
+    , witch
+  default-language: Haskell2010
+
+test-suite HP0-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_HP0
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HP0
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , hashable
+    , haskeline
+    , megaparsec
+    , microlens-platform
+    , mtl
+    , parser-combinators
+    , parsers
+    , pretty-simple
+    , prettyprinter
+    , process
+    , split
+    , text
+    , witch
+  default-language: Haskell2010

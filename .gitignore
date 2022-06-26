@@ -1,0 +1,5 @@
+.stack-work/
+*~
+.wasm
+.wat
+WasmerRuntime/target
